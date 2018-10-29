@@ -1,0 +1,7 @@
+K_range = range(1,10)
+distortions = []
+
+for i in K_range:
+	kmeanModel = KMeans(n_clusters = i)
+	kmeanModel.fit(X)
+	distortions.append(sum(np.min(cdist(X,
